@@ -1,1 +1,12 @@
-<p>chat works!</p>
+<p>Hallo {{ this.person?.name }}!</p>
+
+<ng-container *ngFor="let row of message; let uuid = index">
+  <div className="chat-name">{{ row.name }}</div>
+  <div className="chat-date">{{ row.createdAt }}</div>
+  <div className="chat-message">{{ row.message }}</div>
+</ng-container>
+
+<form [formGroup]="messageForm" (ngSubmit)="submitForm()">
+  <input matInput formControlName="name" placeholder="Enter your message" type="text">
+  <button mat-button type="submit">Send</button>
+</form>
