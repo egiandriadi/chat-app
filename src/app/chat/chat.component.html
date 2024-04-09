@@ -1,12 +1,16 @@
-<p>Hallo {{ this.person?.name }}!</p>
-
-<ng-container *ngFor="let row of message; let uuid = index">
-  <div className="chat-name">{{ row.name }}</div>
-  <div className="chat-date">{{ row.createdAt }}</div>
-  <div className="chat-message">{{ row.message }}</div>
-</ng-container>
-
-<form [formGroup]="messageForm" (ngSubmit)="submitForm()">
-  <input matInput formControlName="name" placeholder="Enter your message" type="text">
-  <button mat-button type="submit">Send</button>
-</form>
+<div class="chat-box">
+  <p class="welcome-chat">Hallo {{ this.person?.name }}!</p>
+  <div class="chat-box">
+  <ng-container *ngFor="let row of message; let uuid = index">
+    <div class="chat-item" [ngClass]="{'right': row.personUuid === person?.uuid}">
+      <div class="chat-name">{{ row.name }}</div>
+      <div class="chat-date">{{ row.createdAt }}</div>
+      <div class="chat-message">{{ row.message }}</div>
+    </div>
+  </ng-container>
+  </div>
+  <form [formGroup]="messageForm" (ngSubmit)="submitForm()" class="chat-form">
+    <input matInput formControlName="name" class="chat-input " placeholder="Enter your message" type="text">
+    <button mat-button type="submit" class="send-button">Send</button>
+  </form>
+</div>

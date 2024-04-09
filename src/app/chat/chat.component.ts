@@ -43,7 +43,6 @@ export class ChatComponent implements OnInit, OnDestroy {
   fetchData() {
     const allMessages = getMessagesFromLocalStorage();
     this.message = getFirst25Messages(allMessages);
-    console.log("🚀 ~ ChatComponent ~ fetchData ~ message:", this.message)
     this.message.sort((a, b) => {
       if (a.createdAt instanceof Date && b.createdAt instanceof Date) {
         return b.createdAt.getTime() - a.createdAt.getTime();
@@ -52,7 +51,7 @@ export class ChatComponent implements OnInit, OnDestroy {
     });
     setTimeout(() => {
       this.fetchData();
-    }, 1000);
+    }, 5000);
   
   }
 
