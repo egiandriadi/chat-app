@@ -1,0 +1,35 @@
+/* Styles for the login form container */
+.login-form {
+  width: 300px;
+  margin: 30px auto;
+  padding: 20px; 
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9; 
+}
+
+/* Styles for the input field */
+.login-input {
+  width: 90%; 
+  margin-bottom: 15px; 
+  padding: 10px;
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+}
+
+/* Styles for the submit button */
+.login-submit {
+  width: 100%; 
+  padding: 10px;
+  border: none; 
+  border-radius: 5px; 
+  background-color: #4caf50;
+  color: #ffffff; 
+  cursor: pointer; 
+}
+
+/* Styles for the submit button on hover */
+.login-submit:hover {
+  background-color: #0056b3; 
+  color:#ffffff;
+}
