@@ -5,7 +5,7 @@ import { LoginComponent } from './login/login.component';
 
 export const routes: Routes = [
   { path: '', component: LoginComponent },  
-  { path: 'chat', component: ChatComponent },  
+  { path: 'chat/:uuid', component: ChatComponent },  
 ];
 
 @NgModule({
